@@ -2,7 +2,8 @@
 
 #include "linearSearch.h"
 
-using namespace LinearSearch;
+namespace LinearSearch
+{
 
 TEST(LinearSearch, basic)
 {
@@ -22,4 +23,6 @@ TEST(LinearSearch, improved)
     int a[5] = {9, 7, 2, 16, 4};
     auto ans = ob.improvedSearch(a, n, k);
     EXPECT_EQ(4, ans);
+}
+
 }

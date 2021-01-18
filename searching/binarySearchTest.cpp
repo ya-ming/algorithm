@@ -45,4 +45,24 @@ TEST(binarySearch, basic2)
     EXPECT_EQ(1, ans);
 }
 
+TEST(binarySearch, recursive)
+{
+    Solution ob;
+
+    int n = 5, k = 6;
+    int a[5] = {1, 2, 3, 4, 6};
+    auto ans = ob.binarySearch(a, 0, n - 1, k);
+    EXPECT_EQ(5, ans);
+}
+
+TEST(binarySearch, recursive1)
+{
+    Solution ob;
+
+    int n = 5, k = 2;
+    int a[5] = {1, 2, 3, 4, 6};
+    auto ans = ob.binarySearch(a, 0, n - 1, k);
+    EXPECT_EQ(2, ans);
+}
+
 }

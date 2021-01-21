@@ -25,4 +25,14 @@ TEST(LinearSearch, improved)
     EXPECT_EQ(4, ans);
 }
 
+TEST(LinearSearch, improved1)
+{
+    Solution ob;
+
+    int n = 5, k = 20;
+    int a[5] = {9, 7, 2, 16, 4};
+    auto ans = ob.improvedSearch(a, n, k);
+    EXPECT_EQ(-1, ans);
+}
+
 }

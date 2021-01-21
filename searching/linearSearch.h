@@ -1,3 +1,6 @@
+#ifndef _LINEARSEARCH_
+#define _LINEARSEARCH_
+
 #include <iostream>
 
 using namespace std;
@@ -42,6 +45,8 @@ namespace LinearSearch
                 left++;
                 right--;
             }
+
+            return -1;
         }
     };
 
@@ -66,3 +71,5 @@ namespace LinearSearch
 
     // } Driver Code Ends
 }; // namespace LinearSearch
+
+#endif

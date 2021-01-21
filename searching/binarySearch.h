@@ -1,3 +1,6 @@
+#ifndef _BINARYSEARCH_
+#define _BINARYSEARCH_
+
 #include <iostream>
 
 using namespace std;
@@ -57,3 +60,5 @@ namespace BinarySearch
         }
     };
 } // namespace BinarySearch
+
+#endif

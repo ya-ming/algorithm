@@ -24,7 +24,7 @@ namespace BinarySearch
             {
                 if (arr[mid] == k)
                 {
-                    return mid + 1;
+                    return mid;
                 }
                 else if (arr[mid] < k)
                 {
@@ -47,7 +47,7 @@ namespace BinarySearch
                 int mid = l + (r - l) / 2;
 
                 if (arr[mid] == k)
-                return mid + 1;
+                    return mid;
 
                 if (arr[mid] > k)
                     return binarySearch(arr, l, mid - 1, k);

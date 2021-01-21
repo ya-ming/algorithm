@@ -12,7 +12,7 @@ TEST(binarySearch, basic)
     int n = 5, k = 6;
     int a[5] = {1, 2, 3, 4, 6};
     auto ans = ob.searchInSorted(a, n, k);
-    EXPECT_EQ(5, ans);
+    EXPECT_EQ(4, ans);
 }
 
 TEST(binarySearch, basic0)
@@ -22,7 +22,7 @@ TEST(binarySearch, basic0)
     int n = 1, k = 16;
     int a[1] = {16};
     auto ans = ob.searchInSorted(a, n, k);
-    EXPECT_EQ(1, ans);
+    EXPECT_EQ(0, ans);
 }
 
 TEST(binarySearch, basic1)
@@ -42,7 +42,7 @@ TEST(binarySearch, basic2)
     int n = 5, k = 1;
     int a[5] = {1, 2, 3, 4, 6};
     auto ans = ob.searchInSorted(a, n, k);
-    EXPECT_EQ(1, ans);
+    EXPECT_EQ(0, ans);
 }
 
 TEST(binarySearch, recursive)
@@ -52,7 +52,7 @@ TEST(binarySearch, recursive)
     int n = 5, k = 6;
     int a[5] = {1, 2, 3, 4, 6};
     auto ans = ob.binarySearch(a, 0, n - 1, k);
-    EXPECT_EQ(5, ans);
+    EXPECT_EQ(4, ans);
 }
 
 TEST(binarySearch, recursive1)
@@ -62,7 +62,7 @@ TEST(binarySearch, recursive1)
     int n = 5, k = 2;
     int a[5] = {1, 2, 3, 4, 6};
     auto ans = ob.binarySearch(a, 0, n - 1, k);
-    EXPECT_EQ(2, ans);
+    EXPECT_EQ(1, ans);
 }
 
 }

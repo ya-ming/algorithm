@@ -17,7 +17,7 @@ namespace LinearSearch
             for (int i = 0; i < n; i++)
             {
                 if (arr[i] == k)
-                    return i + 1;
+                    return i;
             }
             return -1;
         }
@@ -34,12 +34,12 @@ namespace LinearSearch
             {
                 if (arr[left] == k)
                 {
-                    return left + 1;
+                    return left;
                 }
 
                 if (arr[right] == k)
                 {
-                    return right + 1;
+                    return right;
                 }
 
                 left++;

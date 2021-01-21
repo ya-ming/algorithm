@@ -4,6 +4,7 @@
 #include "searching/binarySearchTest.cpp"
 #include "searching/jumpSearchTest.cpp"
 #include "searching/exponentialSearchTest.cpp"
+#include "searching/ternarySearchTest.cpp"
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv); 

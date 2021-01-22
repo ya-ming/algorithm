@@ -4,11 +4,12 @@ https://www.geeksforgeeks.org/fundamentals-of-algorithms/
 
 ## Search
 
-* Linear Search
-* Binary Search
-* Jump Search
-* Exponential Search
-* Ternary Search
+* Linear Search - O(n)
+* Binary Search - O(Logn)
+* Jump Search - O(√n)
+* Exponential Search - O(Logn)
+* Ternary Search - O((2 / Log23) * Log2n)
+* List Search - O(m*n)
 
 ## Sort
 

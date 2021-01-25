@@ -6,6 +6,7 @@
 #include "searching/exponentialSearchTest.cpp"
 #include "searching/ternarySearchTest.cpp"
 #include "searching/listSearchTest.cpp"
+#include "searching/fibonacciSearchTest.cpp"
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv); 

@@ -48,28 +48,19 @@ namespace LinearSearch
 
             return -1;
         }
+
+        // recursive function to search x in arr[l...r]
+        int recSearch(int arr[], int l, int r, int k)
+        {
+            if (r < l)
+                return -1;
+            if (arr[l] == k)
+                return l;
+            if (arr[r] == k)
+                return r;
+            return recSearch(arr, l + 1, r - 1, k);
+        }
     };
-
-    // { Driver Code Starts.
-
-    // int main() {
-    //     int t;
-    //     cin >> t;
-    //     while (t--) {
-    //         int n, i, k;
-    //         cin >> n >> k;
-    //         int *a = new int[n];
-    //         for (i = 0; i < n; i++) {
-    //             cin >> a[i];
-    //         }
-    //         Solution ob;
-    //         auto ans = ob.search(a, n, k);
-    //         cout << ans << "\n";
-    //     }
-    //     return 0;
-    // }
-
-    // } Driver Code Ends
 }; // namespace LinearSearch
 
 #endif

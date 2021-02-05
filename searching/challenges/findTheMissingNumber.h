@@ -11,12 +11,12 @@
 //    i.e sum of numbers from 1 to n can be calculated using the formula n*(n+1)/2.
 //    Now find the sum of all the elements in the array and subtract it from the sum of first n natural numbers,
 //    it will be the value of the missing element.
-// Algorithm: 
+// Algorithm:
 // Calculate the sum of first n natural numbers as sumtotal= n*(n+1)/2
 // Create a variable sum to store the sum of array elements.
 // Traverse the array from start to end.
 // Update the value of sum as sum = sum + array[i]
-// Print the missing number as sumtotal – sum
+// Print the missing number as sumtotal - sum
 int findTheMissingNumber(int a[], int n)
 {
     int expectedSum = n * (n + 1) / 2;
@@ -36,7 +36,7 @@ int findTheMissingNumber(int a[], int n)
 // Algorithm: 
 // Create a variable sum = 1 to which will store the missing number and a counter c = 2.
 // Traverse the array from start to end.
-// Update the value of sum as sum = sum – array[i] + c and update c as c++.
+// Update the value of sum as sum = sum - array[i] + c and update c as c++.
 // Print the missing number as a sum.
 int findTheMissingNumberPreventOverflow(int a[], int n)
 {

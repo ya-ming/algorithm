@@ -21,6 +21,9 @@ https://www.geeksforgeeks.org/fundamentals-of-algorithms/
 ### Challenges
 
 * Find the missing number
+* Median of two sorted arrays
+* Two elements whose sum is closest to zero
+
 ## Sort
 
 * ...

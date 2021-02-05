@@ -8,6 +8,7 @@
 #include "searching/listSearchTest.cpp"
 #include "searching/fibonacciSearchTest.cpp"
 #include "searching/searchTest.cpp"
+#include "searching/challenges/searchingChallengesTest.cpp"
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv); 

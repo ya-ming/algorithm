@@ -18,6 +18,9 @@ https://www.geeksforgeeks.org/fundamentals-of-algorithms/
 * List Search - O(m*n)
 * Fibonacci Search - O(Logn)
 
+### Challenges
+
+* Find the missing number
 ## Sort
 
 * ...

@@ -3,6 +3,7 @@
 #include "findTheMissingNumber.h"
 #include "medianOfTwoSortedArraysOfSameSize.h"
 #include "twoNumbersWihSumCloestToZero.h"
+#include "findTheSmallestAndsecondSmallestElementsInAnArray.h"
 
 TEST(FindTheMissingNumber, basic)
 {
@@ -54,4 +55,46 @@ TEST(TwoNumbersWihSumCloestToZero, basic)
     twoNumbersWihSumCloestToZero(arr, n, x, y);
     EXPECT_EQ(-80, arr[x]);
     EXPECT_EQ(85, arr[y]);
+}
+
+TEST(findTheSmallestAndsecondSmallestElementsInAnArray, basic)
+{
+    int arr[] = {1, 60, -10, 70, -80, 85};
+    int n = sizeof(arr)/sizeof(arr[0]); 
+
+    int s1, s2;
+    findTheSmallestAndsecondSmallestElementsInAnArray(arr, n, s1, s2);
+    EXPECT_EQ(-80, s1);
+    EXPECT_EQ(-10, s2);
+}
+
+TEST(findTheSmallestAndsecondSmallestElementsInAnArray, basic2)
+{
+    int arr[] = {2, 3, 4, 5, 6};
+    int n = sizeof(arr)/sizeof(arr[0]); 
+
+    int s1, s2;
+    findTheSmallestAndsecondSmallestElementsInAnArray(arr, n, s1, s2);
+    EXPECT_EQ(2, s1);
+    EXPECT_EQ(3, s2);
+}
+
+TEST(findTheSmallestAndsecondSmallestElementsInAnArray, basic3)
+{
+    int arr[] = {1, 1, 1, 1, 1};
+    int n = sizeof(arr)/sizeof(arr[0]); 
+
+    int s1, s2;
+    EXPECT_EQ(false, findTheSmallestAndsecondSmallestElementsInAnArray(arr, n, s1, s2));
+}
+
+TEST(findTheSmallestAndsecondSmallestElementsInAnArray, basic4)
+{
+    int arr[] = {859, 396, 30, 238, 236, 794, 819, 429, 144, 12, 929, 530, 777, 405, 444, 764, 614, 539, 607, 841, 905, 819};
+    int n = sizeof(arr)/sizeof(arr[0]); 
+
+    int s1, s2;
+    EXPECT_EQ(true, findTheSmallestAndsecondSmallestElementsInAnArray(arr, n, s1, s2));
+    EXPECT_EQ(12, s1);
+    EXPECT_EQ(30, s2);
 }

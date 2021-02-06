@@ -23,6 +23,7 @@ https://www.geeksforgeeks.org/fundamentals-of-algorithms/
 * Find the missing number
 * Median of two sorted arrays
 * Two elements whose sum is closest to zero
+* Find the smallest and second smallest elements in an array
 
 ## Sort
 

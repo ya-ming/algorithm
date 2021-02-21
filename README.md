@@ -24,6 +24,7 @@ https://www.geeksforgeeks.org/fundamentals-of-algorithms/
 * Median of two sorted arrays
 * Two elements whose sum is closest to zero
 * Find the smallest and second smallest elements in an array
+* Middle of Three
 
 ## Sort
 

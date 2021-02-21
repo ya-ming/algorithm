@@ -4,6 +4,7 @@
 #include "medianOfTwoSortedArraysOfSameSize.h"
 #include "twoNumbersWihSumCloestToZero.h"
 #include "findTheSmallestAndsecondSmallestElementsInAnArray.h"
+#include "findTheMiddleOfThreeNumbers.h"
 
 TEST(FindTheMissingNumber, basic)
 {
@@ -97,4 +98,15 @@ TEST(findTheSmallestAndsecondSmallestElementsInAnArray, basic4)
     EXPECT_EQ(true, findTheSmallestAndsecondSmallestElementsInAnArray(arr, n, s1, s2));
     EXPECT_EQ(12, s1);
     EXPECT_EQ(30, s2);
+}
+
+TEST(findTheMiddleOfThreeNumbers, basic)
+{
+    int A = 978, B = 518, C = 300;
+    EXPECT_EQ(B, findTheMiddleOfThreeNumbers(A, B, C));
+
+    A = 162;
+    B = 934;
+    C = 200;
+    EXPECT_EQ(C, findTheMiddleOfThreeNumbers(A, B, C));
 }

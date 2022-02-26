@@ -10,6 +10,8 @@
 #include "searching/searchTest.cpp"
 #include "searching/challenges/searchingChallengesTest.cpp"
 
+#include "algorithms\union_find\quick_find_uf_test.cpp"
+
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv); 
     return RUN_ALL_TESTS();

@@ -7,7 +7,6 @@ using namespace std;
 
 namespace union_find
 {
-    //User function template for C++
     class QuickFindUF
     {
     private:

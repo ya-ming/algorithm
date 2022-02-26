@@ -1,13 +1,13 @@
 #include <gtest/gtest.h>
 
-#include "quick_find_uf.h"
+#include "quick_union_uf.h"
 
 namespace union_find
 {
 
-TEST(union_find, quick_find_uf)
+TEST(union_find, quick_union_uf)
 {
-    QuickFindUF ob(10);
+    QuickUnionUF ob(10);
 
     ob.union_connections(4, 3);
     ob.union_connections(3, 8);

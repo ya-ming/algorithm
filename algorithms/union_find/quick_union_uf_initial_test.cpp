@@ -1,11 +1,11 @@
 #include <gtest/gtest.h>
 
-#include "quick_union_uf.h"
+#include "quick_union_uf_initial.h"
 
-namespace union_find
+namespace union_find_initial
 {
 
-TEST(union_find, quick_union_uf)
+TEST(union_find_initial, quick_union_uf_initial)
 {
     QuickUnionUF ob(10);
 

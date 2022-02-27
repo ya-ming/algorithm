@@ -2,11 +2,10 @@
 
 #include <iostream>
 #include <vector>
-#include <iomanip>
 
 using namespace std;
 
-namespace union_find
+namespace union_find_initial
 {
     class QuickUnionUF
     {
@@ -27,18 +26,19 @@ namespace union_find
             }
         }
 
-        void print(size_t itemsPerRow)
+        int root(size_t i)
         {
-            for (size_t i = 0; i < m_id.size(); i++)
+            // chase parent pointers until reach root
+            // (depth of i array accesses)
+            while (m_id[i] != i)
             {
-                cout << right << setw(3) << m_id[i] << " ";
-                if (i % itemsPerRow == 0)
-                    cout << endl;
+                i = m_id[i];
             }
-            cout << endl;
+
+            return i;
         }
 
-        int root(size_t i)
+        int root_with_path_compression(size_t i)
         {
             // chase parent pointers until reach root
             // (depth of i array accesses)
@@ -64,8 +64,15 @@ namespace union_find
         {
             // change root of p to point to root of q
             // (depth of p and q array accesses)
-            int i = root(p);
-            int j = root(q);
+            m_id[root(p)] = root(q);
+        }
+
+        void weighted_union_connections(size_t p, size_t q)
+        {
+            // change root of p to point to root of q
+            // (depth of p and q array accesses)
+            int i = root_with_path_compression(p);
+            int j = root_with_path_compression(q);
             if (m_sz[i] < m_sz[j])
             {
                 m_id[i] = j;

@@ -46,4 +46,4 @@ namespace union_find
             }
         }
     };
-} // namespace TernarySearch
+}

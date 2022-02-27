@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <random>
-#include "quick_union_uf.h"
+#include "../quick_union_uf.h"
 
 using namespace std;
 

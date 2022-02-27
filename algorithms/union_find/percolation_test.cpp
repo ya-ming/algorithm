@@ -9,7 +9,7 @@ namespace union_find
 
 TEST(union_find, 4_4)
 {
-    int n = 4;
+    unsigned int n = 4;
     //   0 
     //   1   2   3   4 
     //   5   6   7   8 
@@ -43,13 +43,13 @@ TEST(union_find, 4_4)
 
 TEST(union_find, generateRowCol)
 {
-    int n = 20;
+    unsigned int n = 20;
     random_device rd;  //Will be used to obtain a seed for the random number engine
     mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
     uniform_int_distribution<> distrib(1, n);
 
-    int row = distrib(gen);
-    int col = distrib(gen);
+    unsigned int row = distrib(gen);
+    unsigned int col = distrib(gen);
 
     cout << "row = " << row << endl;
     cout << "col = " << col << endl;
@@ -58,7 +58,7 @@ TEST(union_find, generateRowCol)
 
 TEST(union_find, 20_20)
 {
-    int n = 20;
+    unsigned int n = 20;
     random_device rd;  //Will be used to obtain a seed for the random number engine
     mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
     uniform_int_distribution<> distrib(1, n);
@@ -66,11 +66,11 @@ TEST(union_find, 20_20)
     Percolation percolation(n);
     percolation.print();
 
-    int count = 0;
+    unsigned int count = 0;
     while (!percolation.percolates())
     {
-        int row = distrib(gen);
-        int col = distrib(gen);
+        unsigned int row = distrib(gen);
+        unsigned int col = distrib(gen);
 
         while (percolation.isOpen(row, col)) {
             row = distrib(gen);

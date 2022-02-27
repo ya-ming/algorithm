@@ -13,7 +13,7 @@ namespace union_find
     {
     public:
         // perform independent trials on an n-by-n grid
-        PercolationStats(int n, int trials)
+        PercolationStats(unsigned int n, unsigned int trials)
             : m_n(n), m_trails(trials)
         {
             m_thresholds.reserve(trials);
@@ -21,7 +21,7 @@ namespace union_find
 
         void compute()
         {
-            for (int i = 0; i < m_trails; i++)
+            for (unsigned int i = 0; i < m_trails; i++)
             {
                 double threshold = computeThreshold();
                 m_thresholds.push_back(threshold);
@@ -38,11 +38,11 @@ namespace union_find
             mt19937 gen(rd()); // Standard mersenne_twister_engine seeded with rd()
             uniform_int_distribution<> distrib(1, m_n);
 
-            int threshold = 0;
+            unsigned int threshold = 0;
             while (!percolation.percolates())
             {
-                int row = distrib(gen);
-                int col = distrib(gen);
+                unsigned int row = distrib(gen);
+                unsigned int col = distrib(gen);
 
                 while (percolation.isOpen(row, col))
                 {
@@ -63,7 +63,7 @@ namespace union_find
         void print()
         {
             // cout << "Threshods = " << endl;
-            // for (int i = 1; i < m_trails + 1; i++)
+            // for (unsigned int i = 1; i < m_trails + 1; i++)
             // {
             //     cout << m_thresholds[i - 1] << " ";
             //     if (i % 20 == 0)
@@ -80,7 +80,7 @@ namespace union_find
         double mean()
         {
             double sum = 0;
-            for (int i = 0; i < m_trails; i++)
+            for (unsigned int i = 0; i < m_trails; i++)
             {
                 sum += m_thresholds[i];
             }
@@ -92,7 +92,7 @@ namespace union_find
         double stddev()
         {
             double sum = 0;
-            for (int i = 0; i < m_trails; i++)
+            for (unsigned int i = 0; i < m_trails; i++)
             {
                 sum += pow(m_thresholds[i] - m_mean, 2);
             }
@@ -113,8 +113,8 @@ namespace union_find
         }
 
     private:
-        int m_n;      // elements per site
-        int m_trails; // number of trails
+        unsigned int m_n;      // elements per site
+        unsigned int m_trails; // number of trails
 
         double m_mean;
         double m_std_dev;

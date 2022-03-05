@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
 #include "percolationStats.h"
-#include "../stopWatch.h"
+#include "../../utility/stopWatch.h"
 
 using namespace std;
 

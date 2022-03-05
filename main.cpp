@@ -16,6 +16,8 @@
 #include "algorithms\union_find\percolation\percolation_test.cpp"
 #include "algorithms\union_find\percolation\percolationStats_test.cpp"
 
+#include "algorithms\analysis_of_algorithms\three_sum_test.cpp"
+
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv); 
     return RUN_ALL_TESTS();

@@ -34,3 +34,6 @@
 *.ilk
 *.pdb
 .vscode
+
+# input files for testing
+algorithms/inputs/*

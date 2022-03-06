@@ -18,6 +18,7 @@
 
 #include "algorithms\analysis_of_algorithms\three_sum_test.cpp"
 #include "algorithms\analysis_of_algorithms\deque\deque_test.cpp"
+#include "algorithms\analysis_of_algorithms\deque\randomizedQueue_test.cpp"
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv); 

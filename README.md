@@ -34,4 +34,4 @@ https://www.geeksforgeeks.org/fundamentals-of-algorithms/
 [algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/home/)
   * [Percolation](https://github.com/ya-ming/algorithm/tree/main/algorithms/union_find/percolation)
   * Three sum O(N^3) and optimized Three sum O(N^2 * logN)
-  * [Deque](https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php)
+  * [Deque & Randomized queue & Permuation](https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php)

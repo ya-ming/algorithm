@@ -21,6 +21,7 @@
 #include "algorithms\analysis_of_algorithms\deque\randomizedQueue_test.cpp"
 
 #include "algorithms\sort\sort_test.cpp"
+#include "algorithms\sort\point_test.cpp"
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv); 

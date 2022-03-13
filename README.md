@@ -36,3 +36,4 @@ https://www.geeksforgeeks.org/fundamentals-of-algorithms/
   * Three sum O(N^3) and optimized Three sum O(N^2 * logN)
   * [Deque & Randomized queue & Permuation](https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php)
   * Sort (Selection, Insertion, Shell, Shuffle, Merge)
+  * [Collinear Points](https://github.com/ya-ming/algorithm/tree/main/algorithms/sort/)

@@ -14,7 +14,6 @@ namespace sort
     class Sort
     {
     private:
-        
     public:
         // Proposition. Selection sort uses (N– 1) + (N– 2) + ... + 1 + 0 ~ N^2 / 2 compares
         // and N exchanges.
@@ -59,9 +58,9 @@ namespace sort
             size_t N = a.size();
             int h = 0;
             // 3x + 1
-            while (h < N/3)
+            while (h < N / 3)
             {
-                h = 3*h + 1;
+                h = 3 * h + 1;
             }
 
             while (h >= 1)
@@ -80,7 +79,7 @@ namespace sort
                         }
                     }
                 }
-                h = h/3;
+                h = h / 3;
             }
         }
 
@@ -138,14 +137,14 @@ namespace sort
             // if (hi <= lo)
             //     return;
             // optimization: because Mergesort has too much overhead for tiny subarrays
-            #define CUTOFF 7
+#define CUTOFF 7
             if (hi <= lo + CUTOFF - 1)
             {
                 insertionSort(a, lo, hi);
                 return;
             }
 
-            int mid = lo + (hi - lo) /2;
+            int mid = lo + (hi - lo) / 2;
             mergeSort(a, aux, lo, mid);
             mergeSort(a, aux, mid + 1, hi);
 
@@ -167,6 +166,69 @@ namespace sort
                     merge(a, aux, lo, lo + sz - 1, min(lo + sz + sz - 1, N - 1));
                 }
             }
+        }
+
+        int partition(vector<int> &a, int lo, int hi)
+        {
+            int i = lo, j = hi + 1;
+            while (true)
+            {
+                while (a[++i] < a[lo])
+                    if (i == hi)
+                        break;
+                while (a[--j] > a[lo])
+                    if (j == lo)
+                        break;
+
+                if (i >= j)
+                    break;
+                swap(a[i], a[j]);
+            }
+
+            swap(a[lo], a[j]);
+            return j;
+        }
+
+        void quickSort(vector<int> &a)
+        {
+            shuffle(a);
+            quickSort(a, 0, a.size() - 1);
+        }
+
+        int medianOf3(int a, int b, int c)
+        {
+            // Is a greater than exclusively one of the others? return a
+            // Is b smaller than exclusively one of the others? return b
+            // If none of above: return c
+            if ((a > b) ^ (a > c))
+                return a;
+            else if ((b < a) ^ (b < c))
+                return b;
+            else
+                return c;
+        }
+
+        void quickSort(vector<int> &a, int lo, int hi)
+        {
+            // if (hi <= lo)
+            //     return;
+            // optimization: because Mergesort has too much overhead for tiny subarrays
+            if (hi <= lo + CUTOFF - 1)
+            {
+                insertionSort(a, lo, hi);
+                return;
+            }
+
+            // Median of sample.
+            // ・Best choice of pivot item = median.
+            // ・Estimate true median by taking median of sample.
+            // ・Median-of-3 (random) items.
+            int m = medianOf3(a[lo], a[lo + (hi - lo) / 2], a[hi]);
+            swap(a[lo], a[m]);
+
+            int j = partition(a, lo, hi);
+            quickSort(a, lo, j - 1);
+            quickSort(a, j + 1, hi);
         }
     };
 }

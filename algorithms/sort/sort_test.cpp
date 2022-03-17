@@ -77,4 +77,16 @@ TEST(sort, merge_sort)
     EXPECT_TRUE(isSorted(a, 0, a.size() - 1));
 }
 
+TEST(sort, quick_sort)
+{
+    Sort sort;
+
+    vector<int> a{25, 24, 13, 23, 22, 12, 21, 20, 11, 26, 3, 28, 6, 27, 7, 29, 1, 30, 15, 4, 17, 5, 16, 9, 18, 2, 20, 10, 19, 8};
+    vector<int> aux(a.size());
+
+    sort.quickSort(a);
+
+    EXPECT_TRUE(isSorted(a, 0, a.size() - 1));
+}
+
 }

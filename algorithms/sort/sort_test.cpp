@@ -69,7 +69,7 @@ TEST(sort, merge_sort)
 {
     Sort sort;
 
-    vector<int> a{25, 24, 13, 23, 22, 12, 21, 20, 11, 26, 3, 28, 6, 27, 7, 29, 1, 30, 15, 4, 17, 5, 16, 9, 18, 2, 20, 10, 19, 8};
+    vector<int> a{25, 24, 13, 23, 22, 12, 21, 20, 11, 26, 3, 28, 6, 27, 7, 29, 14, 1, 30, 15, 4, 17, 5, 16, 9, 18, 2, 0, 10, 19, 8};
     vector<int> aux(a.size());
 
     sort.mergeSort(a, aux, 0, a.size() - 1);
@@ -81,12 +81,23 @@ TEST(sort, quick_sort)
 {
     Sort sort;
 
-    vector<int> a{25, 24, 13, 23, 22, 12, 21, 20, 11, 26, 3, 28, 6, 27, 7, 29, 1, 30, 15, 4, 17, 5, 16, 9, 18, 2, 20, 10, 19, 8};
-    vector<int> aux(a.size());
+    vector<int> a{25, 24, 13, 23, 22, 12, 21, 20, 11, 26, 3, 28, 6, 27, 7, 29, 14, 1, 30, 15, 4, 17, 5, 16, 9, 18, 2, 0, 10, 19, 8};
 
     sort.quickSort(a);
 
     EXPECT_TRUE(isSorted(a, 0, a.size() - 1));
+}
+
+TEST(sort, select)
+{
+    Sort sort;
+
+    vector<int> a{25, 24, 13, 23, 22, 12, 21, 20, 11, 26, 3, 28, 6, 27, 7, 29, 14, 1, 30, 15, 4, 17, 5, 16, 9, 18, 2, 0, 10, 19, 8};
+
+    EXPECT_EQ(0, sort.select(a, 0));
+    EXPECT_EQ(10, sort.select(a, 10));
+    EXPECT_EQ(20, sort.select(a, 20));
+    EXPECT_EQ(30, sort.select(a, 30));
 }
 
 }

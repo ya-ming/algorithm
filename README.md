@@ -35,5 +35,5 @@ https://www.geeksforgeeks.org/fundamentals-of-algorithms/
   * [Percolation](https://github.com/ya-ming/algorithm/tree/main/algorithms/union_find/percolation)
   * Three sum O(N^3) and optimized Three sum O(N^2 * logN)
   * [Deque & Randomized queue & Permuation](https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php)
-  * Sort (Selection, Insertion, Shell, Shuffle, Merge, Quick)
+  * Sort (Selection, Insertion, Shell, Shuffle, Merge, Quick, Selection(find a kth smallest item))
   * [Collinear Points](https://github.com/ya-ming/algorithm/tree/main/algorithms/sort/)

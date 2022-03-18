@@ -230,5 +230,23 @@ namespace sort
             quickSort(a, lo, j - 1);
             quickSort(a, j + 1, hi);
         }
+
+        int select(vector<int> &a, int k)
+        {
+            shuffle(a);
+            int lo = 0, hi = a.size() - 1;
+            while (hi > lo)
+            {
+                int j = partition(a, lo, hi);
+                if (j < k)
+                    lo = j + 1;
+                else if (j > k)
+                    hi = j - 1;
+                else
+                    return a[k];
+            }
+
+            return a[k];
+        }
     };
 }

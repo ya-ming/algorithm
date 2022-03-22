@@ -100,4 +100,16 @@ TEST(sort, select)
     EXPECT_EQ(30, sort.select(a, 30));
 }
 
+TEST(sort, threeWayQuickSort)
+{
+    Sort sort;
+
+    vector<int> a{25, 24, 13, 23, 22, 12, 21, 20, 11, 26, 3, 28, 6, 27, 7, 29, 14, 1, 30, 15, 4, 17, 5, 16, 9, 18, 2, 0, 10, 19, 8};
+
+    print(a, 0, 0, 0, true);
+    sort.threeWayQuickSort(a, 0, a.size() - 1);
+
+    EXPECT_TRUE(isSorted(a, 0, a.size() - 1));
+}
+
 }

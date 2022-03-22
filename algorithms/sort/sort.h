@@ -248,5 +248,32 @@ namespace sort
 
             return a[k];
         }
+
+        void threeWayQuickSort(vector<int> &a, int lo, int hi)
+        {
+            if (hi <= lo) return;
+            int lt = lo, gt = hi;
+            int v = a[lo];
+            int i = lo;
+            print(a, lt, i, gt);
+
+            while (i <= gt)
+            {
+                if (a[i] < v)
+                {
+                    swap(a[lt++], a[i++]);
+                }
+                else if (a[i] > v)
+                {
+                    swap(a[i], a[gt--]);
+                }
+                else{
+                    i++;
+                }
+            }
+
+            threeWayQuickSort(a, lo, lt - 1);
+            threeWayQuickSort(a, gt + 1, hi);
+        }
     };
 }
